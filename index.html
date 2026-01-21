@@ -1,0 +1,35 @@
+<!-- file: display_date.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Display Date using onclick()</title>
+
+    <script>
+        function displayDate() {
+            const today = new Date();
+            const formattedDate = today.toDateString();
+
+            alert("Today's Date: " + formattedDate);
+
+            document.getElementById("dateBox").value = formattedDate;
+        }
+    </script>
+</head>
+<body>
+    <h2>Display Date Example</h2>
+
+    <input
+        type="text"
+        id="dateBox"
+        placeholder="Date will appear here"
+        readonly
+    />
+
+    <br /><br />
+
+    <button onclick="displayDate()">
+        Display Date
+    </button>
+</body>
+</html>
